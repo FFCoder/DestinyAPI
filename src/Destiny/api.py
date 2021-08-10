@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 class Destiny(object):
     def __init__(self, BaseUrl) -> None:
         if BaseUrl.endswith("/"):
-            self.BaseUrl = BaseUrl[-1]
+            self.BaseUrl = BaseUrl[:-1]
         else:
             self.BaseUrl = BaseUrl
         self.browser = requests.Session()
